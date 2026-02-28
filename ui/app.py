@@ -1,7 +1,13 @@
 import streamlit as st
 import os
+import sys
 
-# We bypass the API and import the LangGraph machine directly!
+# 1. Force Python to add the root folder to its path so it can find 'core'
+root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if root_dir not in sys.path:
+    sys.path.append(root_dir)
+
+# 2. Now it is safe to import your LangGraph machine!
 from core.graph import content_machine
 
 st.set_page_config(page_title="Tiny Content Machine", layout="wide")
