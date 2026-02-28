@@ -32,40 +32,5 @@ Frontend/UI: Streamlit
 
 Language: Python 3.11+
 
-Repository Structure
-Plaintext
-tiny_content_machine/
-├── .env                  # Local environment variables (ignored in Git)
-├── .gitignore            # Security rules
-├── requirements.txt      # Python dependencies
-├── core/
-│   ├── __init__.py
-│   ├── state.py          # Defines the TypedDict state passed between agents
-│   ├── agents.py         # Defines the LLM prompts and agent logic
-│   └── graph.py          # Wires the agents together into a LangGraph workflow
-└── ui/
-    └── app.py            # Streamlit frontend (Imports the graph directly)
-Local Setup & Installation
-1. Clone the repository
-
-Bash
-git clone https://github.com/YOUR-USERNAME/tiny-content-machine.git
-cd tiny-content-machine
-2. Create a Virtual Environment (Recommended)
-
-Bash
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
-3. Install Dependencies
-
-Bash
-pip install -r requirements.txt
-4. Set up your Environment Variables
-Create a .env file in the root directory and add your OpenAI API key:
-
-Plaintext
-OPENAI_API_KEY=sk-your-secret-key-here
-5. Run the Application
-
-Bash
-streamlit run ui/app.py
+test the application:
+Live link:https://tiny-content-machine.streamlit.app
